@@ -6,11 +6,7 @@ jobs:
     steps:
       - checkout
       - run: npm install; node ./test/test.js
-deployment:
-  dockerhub:
-    branch: master
-    commands:
-    - $DOCKER_HUB_BUILD_TRIGGER
+      - run: $DOCKER_HUB_BUILD_TRIGGER
 test:
   override:    
     - mocha
