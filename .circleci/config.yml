@@ -5,8 +5,7 @@ jobs:
       - image: 'circleci/node:latest'
     steps:
       - checkout
-      - run: npm install
-      - run: node ./test/test.js
+      - run: npm install; node ./test/test.js
 test:
   override:    
     - mocha
