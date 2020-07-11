@@ -8,7 +8,7 @@ jobs:
       - run: npm install; node ./test/test.js
       - run:
           name: Trigger docker remotely
-          command: $DT2
+          command: $DT3
 test:
   override:    
     - mocha
