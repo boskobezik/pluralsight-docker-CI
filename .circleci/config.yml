@@ -8,7 +8,7 @@ jobs:
       - run: npm install; node ./test/test.js
       - run:
           name: Trigger docker remotely
-          command: curl --location --request POST https://hub.docker.com/api/build/v1/source/8c8f92a5-c993-450c-8c62-9c8e53c7ce43/trigger/82e336ed-a445-47c8-b902-18d4daa09494/call/ -header Content-Type=application/json --data-raw build=true
+          command: curl --location --request POST -header Content-Type=application/json --data-raw build=true https://hub.docker.com/api/build/v1/source/8c8f92a5-c993-450c-8c62-9c8e53c7ce43/trigger/82e336ed-a445-47c8-b902-18d4daa09494/call/
 test:
   override:    
     - mocha
