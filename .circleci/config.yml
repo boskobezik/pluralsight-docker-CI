@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo 'hello world'
+      - run: node ./test/test.js
 test:
   override:    
     - mocha
