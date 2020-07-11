@@ -8,7 +8,7 @@ jobs:
       - run: npm install; node ./test/test.js
       - run:
           name: Trigger docker remotely
-          command: $DOCKER_HUB_BUILD_TRIGGER
+          command: $DOCKER_TRIGGER
 
 test:
   override:    
